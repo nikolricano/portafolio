@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<html style=" background-color: pink; color: white; font-family: arial; font-size: 40px;text-align: center;">
+
+<h2>Hola</h2>
+<h2>Mi nombre es <%= @datos[:name] %> y tengo <%= @datos[:edad] %> años</h2>
+<h4>Educacion</h4>
+<% @datos[:estudios].each do |key, value| %>
+  <p><%= key %>: <%= value %></p>
+<% end %>
+<h4 id='pagina'>Trabajos</h4>
+  <table>
+    <thead>
+      <th>Puesto</th>
+      <th>Empresa</th>
+    </thead>
+      </tr>
+        <td><%= @datos[:trabajos][:Garcomex][:puesto] %></td>
+        <td><%= @datos[:trabajos][:Garcomex][:empresa] %></td>
+      </tr>
+        <td><%= @datos[:trabajos][:Canieti][:puesto] %></td>
+        <td><%= @datos[:trabajos][:Canieti][:empresa] %></td>
+      </tr>
+  </table>
+</body>
+</html>
